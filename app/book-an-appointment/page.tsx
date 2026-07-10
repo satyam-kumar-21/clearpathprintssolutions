@@ -3,6 +3,7 @@ import StayInformed from '../components/home/stayInformed'
 import Hero from './hero'
 import AppointmentForm from './appointmentForm'
 import Seo from '../components/seo'
+import CustomerSupport from '../components/customerSupport'
 
 function page() {
   return (
@@ -16,9 +17,10 @@ function page() {
    <Hero />
    
    <AppointmentForm />
+    <StayInformed />
+   <CustomerSupport />
 
-
-   <StayInformed />
+  
    </>
   )
 }

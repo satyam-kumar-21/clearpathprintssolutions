@@ -74,17 +74,25 @@ function AppointmentForm() {
             </form>
           </div>
 
+  
           {/* Image Side */}
-          <div className="relative flex justify-center">
-            <div className="absolute h-72 w-72 rounded-full bg-blue-500/10 blur-3xl" />
+          <div className="relative flex items-center justify-center">
+            {/* Background Glow */}
+            <div className="absolute h-80 w-80 rounded-full bg-blue-500/10 blur-3xl" />
 
-            <Image
-              src="/why-choose.webp"
-              alt="Printer Service"
-              width={550}
-              height={550}
-              className="relative z-10 object-contain"
-            />
+            <div className="relative overflow-hidden rounded-[32px] border border-slate-200 bg-white p-5 shadow-2xl">
+
+              <Image
+                src="/what-we-offer.webp"
+                alt="Printer Service"
+                width={550}
+                height={550}
+                className="mx-auto h-auto w-full max-w-md object-contain"
+              />
+
+
+
+            </div>
           </div>
 
         </div>
