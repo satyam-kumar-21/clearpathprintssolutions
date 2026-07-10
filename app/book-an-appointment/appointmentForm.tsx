@@ -67,7 +67,7 @@ function AppointmentForm() {
 
               <button
                 type="submit"
-                className="btn-primary w-full"
+                className="btn-primary w-full cursor-pointer"
               >
                 Submit Appointment
               </button>
