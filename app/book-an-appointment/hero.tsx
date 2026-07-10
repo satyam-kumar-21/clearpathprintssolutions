@@ -14,10 +14,7 @@ function Hero() {
       <div className="section-shell relative z-10 flex min-h-[520px] items-center py-16 lg:min-h-[620px]">
         <div className="max-w-xl">
 
-          {/* Small Label */}
-          <span className="inline-flex rounded-full border border-blue-500/40 bg-blue-600/20 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-blue-300">
-            Professional Printer Support
-          </span>
+          
 
           {/* Heading */}
           <h1 className="mt-6 text-h1 text-white">
