@@ -4,6 +4,7 @@ import "./globals.css";
 
 import Header from "./components/header";
 import Footer from "./components/footer";
+import ScrollToTop from "./components/scrollToTop";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -100,6 +101,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-screen flex flex-col bg-slate-50 text-slate-900">
+        <ScrollToTop />
         <Header />
 
         <main className="flex-1">{children}</main>
