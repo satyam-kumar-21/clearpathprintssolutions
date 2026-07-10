@@ -174,7 +174,7 @@ function ContactUs() {
 
                         <button
                             type="submit"
-                            className="btn-primary w-full py-4"
+                            className="btn-primary w-full py-4 cursor-pointer"
                         >
                             Book Service
                         </button>
