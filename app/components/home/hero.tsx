@@ -26,19 +26,21 @@ const Hero = () => {
 
   return (
     <section
-      className="relative overflow-hidden bg-cover bg-center bg-no-repeat"
+      className="relative overflow-hidden bg-cover min-h-[90vh] bg-center bg-no-repeat"
       style={{
         backgroundImage: "url('/home-hero-image.webp')",
       }}
+      aria-label="Professional printer service hero"
     >
       {/* Overlay */}
       <div className="absolute inset-0 bg-gradient-to-r from-[#020817]/95 via-[#020817]/85 via-45% to-transparent" />
 
-      {/* Hero Content */}
-      <div className="relative z-10 mx-auto flex min-h-[620px] max-w-7xl items-center px-6 pt-16 pb-12 lg:min-h-[850px] lg:px-8 lg:pt-20 lg:pb-72">
-        <div className="max-w-xl">
+      {/* Hero Content Wrapper */}
+      {/* Using padding here prevents overlapping by ensuring space is always reserved at the bottom */}
+      <div className="section-shell relative z-10 p-10 md:p-20">
+        <div className="max-w-2xl">
           {/* Badge */}
-          <div className="mb-6 flex items-center gap-3 text-sm font-semibold uppercase tracking-wide text-white">
+          <div className="mb-6 flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.2em] text-white/90">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-8 w-8"
@@ -59,7 +61,7 @@ const Hero = () => {
             </span>
           </div>
 
-          <h1 className="text-4xl font-extrabold leading-tight text-white sm:text-5xl lg:text-7xl">
+          <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
             Professional Printer
             <br />
             <span className="text-blue-500">Care Services</span>
@@ -67,7 +69,7 @@ const Hero = () => {
 
           <div className="mt-6 h-1 w-28 bg-[#044dd9]" />
 
-          <p className="mt-8 max-w-lg text-base leading-7 text-slate-200 lg:text-lg lg:leading-8">
+          <p className="mt-8 max-w-lg text-base leading-relaxed text-slate-200 lg:text-lg">
             Schedule professional printer service for installation,
             troubleshooting, maintenance, and wireless setup. Our experienced
             technicians provide dependable on-site support for homes and
@@ -76,8 +78,8 @@ const Hero = () => {
 
           <div className="mt-10 flex flex-col gap-5 sm:flex-row sm:items-center sm:gap-8">
             <Link
-              href="/book-an-appointment"
-              className="rounded-lg bg-[#044dd9] px-8 py-4 text-center font-semibold text-white transition hover:bg-[#033cbc]"
+              href="/book-an-appointment/"
+              className="btn-primary inline-flex justify-center rounded-md bg-[#044dd9] px-6 py-3.5 text-center text-sm font-bold tracking-wider text-white transition-all hover:bg-blue-700"
             >
               BOOK APPOINTMENT
             </Link>
@@ -98,7 +100,7 @@ const Hero = () => {
                 />
               </svg>
 
-              <span className="font-semibold uppercase text-white">
+              <span className="font-semibold uppercase tracking-wider text-white">
                 Certified Support
               </span>
             </div>
@@ -107,8 +109,8 @@ const Hero = () => {
       </div>
 
       {/* ================= MOBILE FEATURE CARDS ================= */}
-      <div className="relative z-20 px-6 pb-8 lg:hidden">
-        <div className="overflow-hidden rounded-2xl bg-[#12328a]/95 shadow-2xl">
+      <div className="section-shell relative z-20 pb-12 lg:hidden">
+        <div className="overflow-hidden rounded-[1.5rem] bg-[#12328a]/95 shadow-2xl">
           {features.map((item, index) => (
             <div
               key={item.title}
@@ -118,7 +120,7 @@ const Hero = () => {
                   : ""
               }`}
             >
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#044dd9] text-xl font-bold text-white">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/10 text-base font-bold text-white">
                 ✓
               </div>
 
@@ -127,7 +129,7 @@ const Hero = () => {
                   {item.title}
                 </h3>
 
-                <p className="mt-2 text-sm leading-6 text-slate-200">
+                <p className="mt-2 text-sm text-slate-200">
                   {item.description}
                 </p>
               </div>
@@ -137,8 +139,8 @@ const Hero = () => {
       </div>
 
       {/* ================= DESKTOP FLOATING CARDS ================= */}
-      <div className="absolute bottom-8 left-1/2 z-20 hidden w-full max-w-7xl -translate-x-1/2 px-6 lg:block">
-        <div className="grid overflow-hidden rounded-2xl bg-[#044dd9] shadow-2xl md:grid-cols-2 xl:grid-cols-4">
+      <div className="absolute botto left-1/2 z-20 hidden w-full max-w-7xl -translate-x-1/2 px-6 lg:block">
+        <div className="grid overflow-hidden rounded-[1.5rem] bg-[#044dd9] shadow-2xl md:grid-cols-2 xl:grid-cols-4">
           {features.map((item, index) => (
             <div
               key={item.title}
@@ -148,16 +150,17 @@ const Hero = () => {
                   : ""
               }`}
             >
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#044dd9] text-xl font-bold text-white">
+              {/* Changed background from bg-[#044dd9] to white/15 for better checkmark contrast */}
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/15 text-base font-bold text-white">
                 ✓
               </div>
 
               <div>
-                <h3 className="text-base font-bold text-white">
+                <h3 className="text-sm font-bold tracking-wider text-white">
                   {item.title}
                 </h3>
 
-                <p className="mt-3 text-sm leading-7 text-slate-200">
+                <p className="mt-2 text-xs leading-relaxed text-slate-100">
                   {item.description}
                 </p>
               </div>

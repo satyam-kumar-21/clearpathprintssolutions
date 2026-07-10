@@ -38,21 +38,21 @@ const steps = [
 
 const Steps = () => {
   return (
-    <section className="bg-gradient-to-b from-white to-slate-50 py-24">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <section className="bg-gradient-to-b from-white to-slate-50 section-space">
+      <div className="section-shell">
         {/* Heading */}
 
         <div className="mx-auto mb-20 max-w-3xl text-center">
-          <span className="rounded-full bg-blue-100 px-4 py-2 text-sm font-semibold text-blue-600">
+          <span className="eyebrow">
             How It Works
           </span>
 
-          <h2 className="mt-5 text-4xl font-bold text-slate-900 lg:text-5xl">
+          <h2 className="text-h2 mt-5 text-slate-900">
             Simple Process,
             <span className="text-blue-600"> Professional Results</span>
           </h2>
 
-          <p className="mt-6 text-lg leading-8 text-slate-600">
+          <p className="text-body mt-6 text-slate-600">
             Booking an onsite printer service is quick and hassle-free. Follow
             these four simple steps to get professional assistance.
           </p>
@@ -74,7 +74,7 @@ const Steps = () => {
               return (
                 <div
                   key={item.step}
-                  className="group relative rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-3 hover:border-blue-500 hover:shadow-2xl"
+                  className="group relative rounded-[1.5rem] border border-slate-200 bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-3 hover:border-blue-500 hover:shadow-2xl"
                 >
                   {/* Step */}
 
@@ -91,11 +91,11 @@ const Steps = () => {
                   {/* Content */}
 
                   <div className="relative z-10 mt-8">
-                    <h3 className="text-2xl font-bold text-slate-900">
+                    <h3 className="text-h3 text-slate-900">
                       {item.title}
                     </h3>
 
-                    <p className="mt-4 leading-7 text-slate-600">
+                    <p className="text-body mt-4 text-slate-600">
                       {item.description}
                     </p>
                   </div>

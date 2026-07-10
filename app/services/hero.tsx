@@ -17,7 +17,7 @@ const Hero = () => {
         </span>
 
         {/* Heading */}
-        <h1 className="mt-7 max-w-4xl text-4xl font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl">
+        <h1 className="mt-7 max-w-4xl text-3xl font-extrabold tracking-tight text-white md:text-4xl lg:text-6xl">
           Reliable Printer
           <span className="text-blue-200"> Support</span>
           <br />

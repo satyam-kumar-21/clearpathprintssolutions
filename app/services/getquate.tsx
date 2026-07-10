@@ -25,7 +25,7 @@ function GetQuote() {
             {/* Right CTA */}
             <div className="flex flex-col items-center gap-4">
               <Link
-                href="/book-an-appointment"
+                href="/book-an-appointment/"
                 className="rounded-xl bg-white px-8 py-4 text-base font-semibold text-[#044dd9] transition-colors duration-200 hover:bg-slate-100"
               >
                 Book an Appointment

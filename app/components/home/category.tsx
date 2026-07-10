@@ -50,21 +50,21 @@ const services = [
 
 const Category = () => {
   return (
-    <section className="bg-slate-50 py-24">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <section className="bg-slate-50 section-space">
+      <div className="section-shell">
         {/* Heading */}
 
         <div className="mx-auto mb-16 max-w-3xl text-center">
-          <span className="rounded-full bg-blue-100 px-4 py-2 text-sm font-semibold text-blue-700">
+          <span className="eyebrow">
             Our Services
           </span>
 
-          <h2 className="mt-5 text-4xl font-bold text-slate-900 lg:text-5xl">
+          <h2 className="text-h2 mt-5 text-slate-900">
             Explore Printer
             <span className="text-blue-600"> Solutions</span>
           </h2>
 
-          <p className="mt-5 text-lg leading-8 text-slate-600">
+          <p className="text-body mt-5 text-slate-600">
             Professional printer installation, troubleshooting, maintenance,
             wireless setup and business support designed for home and office
             users.
@@ -80,7 +80,7 @@ const Category = () => {
             return (
               <div
                 key={service.title}
-                className="group relative overflow-hidden rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-blue-500 hover:shadow-2xl"
+                className="group relative overflow-hidden rounded-[1.5rem] border border-slate-200 bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-blue-500 hover:shadow-2xl"
               >
                 {/* Background Glow */}
 
@@ -88,23 +88,23 @@ const Category = () => {
 
                 {/* Icon */}
 
-                <div className="relative z-10 mb-7 flex h-16 w-16 items-center justify-center rounded-2xl bg-[#044dd9] text-white shadow-lg">
+                <div className="relative z-10 mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#044dd9] text-white shadow-lg">
                   <Icon size={30} />
                 </div>
 
                 {/* Content */}
 
                 <div className="relative z-10">
-                  <h3 className="mb-4 text-2xl font-bold text-slate-900">
+                  <h3 className="text-h3 mb-3 text-slate-900">
                     {service.title}
                   </h3>
 
-                  <p className="leading-7 text-slate-600">
+                  <p className="text-body text-slate-600">
                     {service.description}
                   </p>
 
                   <Link
-                    href="/book-an-appointment"
+                    href="/book-an-appointment/"
                     className="mt-8 inline-flex items-center gap-2 font-semibold text-[#044dd9] transition group-hover:gap-3"
                   >
                     Book Appointment

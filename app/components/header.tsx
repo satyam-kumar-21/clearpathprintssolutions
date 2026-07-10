@@ -8,12 +8,13 @@ import Image from "next/image";
 const Header = () => {
     const pathname = usePathname();
     const [isOpen, setIsOpen] = useState(false);
+    const normalizedPathname = pathname?.endsWith("/") ? pathname : `${pathname}/`;
 
     const navItems = [
         { name: "Home", href: "/" },
-        { name: "Services", href: "/services" },
-        { name: "Book an Appointment", href: "/book-an-appointment" },
-        { name: "Contact", href: "/contact" },
+        { name: "Services", href: "/services/" },
+        { name: "Book an Appointment", href: "/book-an-appointment/" },
+        { name: "Contact", href: "/contact/" },
     ];
 
     return (
@@ -24,7 +25,7 @@ const Header = () => {
                     <div className="flex items-center justify-center overflow-hidden transition duration-300 group-hover:scale-105">
                         <Image
                             src="/clear-path-prints-solutions-logo.png"
-                            alt="ClearPath Printer Logo"
+                            alt="Clear Path Print Solutions Logo"
                             width={112}
                             height={63}
                             className="h-full w-full object-contain"
@@ -36,7 +37,7 @@ const Header = () => {
                 {/* Desktop Navigation */}
                 <nav className="hidden items-center gap-10 md:flex">
                     {navItems.map((item) => {
-                        const active = pathname === item.href;
+                        const active = normalizedPathname === item.href;
 
                         return (
                             <Link
@@ -46,6 +47,7 @@ const Header = () => {
                                         ? "text-blue-600"
                                         : "text-slate-700 hover:text-blue-600"
                                     }`}
+                                aria-current={active ? "page" : undefined}
                             >
                                 {item.name}
 
@@ -108,7 +110,7 @@ const Header = () => {
                 <div className="mx-4 rounded-2xl border border-slate-200 bg-white shadow-xl">
                     <nav className="flex flex-col p-2">
                         {navItems.map((item) => {
-                            const active = pathname === item.href;
+                            const active = normalizedPathname === item.href;
 
                             return (
                                 <Link
@@ -119,6 +121,7 @@ const Header = () => {
                                             ? "bg-blue-600 text-white shadow-md"
                                             : "text-slate-700 hover:bg-slate-100 hover:text-blue-600"
                                         }`}
+                                    aria-current={active ? "page" : undefined}
                                 >
                                     {item.name}
                                 </Link>

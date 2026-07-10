@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const Footer = () => {
@@ -7,36 +8,21 @@ const Footer = () => {
         <div className="grid gap-10 lg:grid-cols-[2fr_1fr_1fr_1.3fr]">
           {/* Brand */}
           <div>
-            <Link href="/" className="flex items-center gap-3">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600 text-white shadow-lg">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth={2}
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M6 9V4h12v5M6 18h12v2H6zm-2-7h16a2 2 0 012 2v3H2v-3a2 2 0 012-2z"
-                  />
-                </svg>
-              </div>
-
-              <div>
-                <h2 className="text-2xl font-bold text-white">
-                  ClearPath<span className="text-blue-500">Printer</span>
-                </h2>
-                <p className="text-sm text-slate-400">
-                  Printer Support & Setup
-                </p>
+            <Link href="/" className="inline-flex items-center">
+              <div className="relative h-20 w-56 shrink-0">
+                <Image
+                  src="/clear-path-prints-solutions-logo-footers.png"
+                  alt="Clear Path Print Solutions Logo"
+                  fill
+                  sizes="224px"
+                  className="object-contain object-left"
+                  priority
+                />
               </div>
             </Link>
 
             <p className="mt-5 max-w-md leading-7 text-slate-400">
-              ClearPathPrinter offers easy printer setup, Wi-Fi configuration,
+              Clear Path Print Solutions offers easy printer setup, Wi-Fi configuration,
               driver installation and troubleshooting guides to help users keep
               their printers running smoothly.
             </p>
@@ -58,7 +44,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="/services"
+                    href="/services/"
                     className="hover:text-blue-400 transition"
                   >
                     Services
@@ -66,7 +52,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="/book-an-appointment"
+                    href="/book-an-appointment/"
                     className="hover:text-blue-400 transition"
                   >
                     Book Appointment
@@ -74,7 +60,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="/contact"
+                    href="/contact/"
                     className="hover:text-blue-400 transition"
                   >
                     Contact
@@ -92,7 +78,7 @@ const Footer = () => {
               <ul className="space-y-3">
                 <li>
                   <Link
-                    href="/privacy-policy"
+                    href="/privacy-policy/"
                     className="hover:text-blue-400 transition"
                   >
                     Privacy Policy
@@ -100,7 +86,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="/terms-and-conditions"
+                    href="/terms-and-conditions/"
                     className="hover:text-blue-400 transition"
                   >
                     Terms & Conditions
@@ -108,7 +94,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="/cookie-policy"
+                    href="/cookie-policy/"
                     className="hover:text-blue-400 transition"
                   >
                     Cookie Policy
@@ -116,16 +102,16 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="/disclaimer"
+                    href="/disclaimer/"
                     className="hover:text-blue-400 transition"
                   >
                     Disclaimer
                   </Link>
                 </li>
 
-                 <li>
+                <li>
                   <Link
-                    href="/refund-cancellation-policy"
+                    href="/refund-cancellation-policy/"
                     className="hover:text-blue-400 transition"
                   >
                     Refund cancellation policy
@@ -142,7 +128,7 @@ const Footer = () => {
             </h3>
 
             <div className="space-y-3 text-slate-400">
-              <p>support@clearpathprinter.com</p>
+              <p>support@clearpathprintsolutions.com</p>
 
               <p>+1 (800) 000-0000</p>
 
@@ -164,28 +150,28 @@ const Footer = () => {
           <p className="text-center md:text-left">
             © {new Date().getFullYear()}{" "}
             <span className="font-semibold text-blue-500">
-              ClearPathPrinter
+              Clear Path Print Solutions
             </span>
             . All rights reserved.
           </p>
 
           <div className="flex justify-center gap-6">
             <Link
-              href="/privacy-policy"
+              href="/privacy-policy/"
               className="hover:text-blue-400 transition"
             >
               Privacy
             </Link>
 
             <Link
-              href="/terms-and-conditions"
+              href="/terms-and-conditions/"
               className="hover:text-blue-400 transition"
             >
               Terms
             </Link>
 
             <Link
-              href="/contact"
+              href="/contact/"
               className="hover:text-blue-400 transition"
             >
               Contact

@@ -5,18 +5,18 @@ function AppointmentForm() {
   return (
     <section
       id="appointmentForm"
-      className="scroll-mt-24 bg-slate-50 py-16"
+      className="scroll-mt-24 bg-slate-50 section-space"
     >
-      <div className="mx-auto max-w-7xl px-6">
+      <div className="section-shell">
         <div className="grid items-center gap-10 lg:grid-cols-2">
 
           {/* Form */}
-          <div className="rounded-3xl bg-white p-8 shadow-lg shadow-slate-200/50">
-            <h2 className="text-3xl font-bold text-slate-900">
+          <div className="rounded-[1.5rem] bg-white p-7 shadow-lg shadow-slate-200/50 sm:p-8">
+            <h2 className="text-h2 text-slate-900">
               Book an Appointment
             </h2>
 
-            <p className="mt-3 text-slate-600">
+            <p className="text-body mt-3 text-slate-600">
               Fill out the form and our support team will contact you shortly.
             </p>
 
@@ -67,7 +67,7 @@ function AppointmentForm() {
 
               <button
                 type="submit"
-                className="w-full cursor-pointer rounded-xl bg-blue-600 py-3 font-semibold text-white transition hover:bg-blue-700"
+                className="btn-primary w-full"
               >
                 Submit Appointment
               </button>
